@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YouTube Video Info</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>YouTube Video Info Grabber</h1>
+        <div class="main-block">
+            <div class="block">
+                <h2>YouTube Video</h2>
+                <img src="{{ info.thumbnail }}" alt="Thumbnail" class="thumbnail">
+                <p><strong>Channel:</strong> <a href="{{ info.channel_url }}">{{ info.channel }}</a></p>
+                <p><strong>Video URL:</strong> <a href="{{ info.video_url }}">{{ info.video_url }}</a></p>
+                <p><strong>Views:</strong> {{ info.views }}</p>
+                <p><strong>Likes:</strong> {{ info.likes }}</p>
+                <p><strong>Upload Time:</strong> {{ info.upload_time }}</p>
+                <p><strong>Video Length:</strong> {{ info.length }}</p>
+                <p><strong>Available Resolutions:</strong> {{ info.resolutions }}</p>
+                <p><strong>Age Limit:</strong> {{ info.age_limit }}</p>
+                <p><strong>Category:</strong> {{ info.category }}</p>
+                <p><strong>Subtitles Available:</strong> {{ info.subtitles }}</p>
+                <p><strong>Best Audio Bitrate:</strong> {{ info.best_audio_bitrate }}</p>
+                <p><strong>Audio Codec:</strong> {{ info.audio_codec }}</p>
+                <p><strong>Best Video Resolution:</strong> {{ info.best_video_resolution }}</p>
+                <p><strong>Video Codec:</strong> {{ info.video_codec }}</p>
+            </div>
+            <div class="block">
+                <h2>More Data</h2>
+                <div class="sub-block">
+                    <h3>Tags</h3>
+                    <p>{{ info.tags }}</p>
+                </div>
+                <div class="sub-block">
+                    <h3>Description</h3>
+                    <p class="description">{{ info.description }}</p>
+                </div>
+            </div>
+        </div>
+        <a href="/">Back</a>
+    </div>
+</body>
+</html>

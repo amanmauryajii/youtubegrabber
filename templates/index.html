@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YouTube Video Info Grabber</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/front.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>YouTube Video Info Grabber</h1>
+        <form action="/fetch_info" method="post" id="fetchForm">
+            <div class="form-group">
+                <input type="text" name="youtube_url" id="youtubeUrl" placeholder="Enter YouTube Video URL" required>
+                <br>
+                <button type="submit" id="submitButton">Get Info</button>
+                <div class="loader" id="loader"></div>
+            </div>
+        </form>
+    </div>
+
+    <script>
+        document.getElementById('fetchForm').addEventListener('submit', function() {
+            document.getElementById('loader').style.display = 'block'; // Show loader on form submit
+        });
+    </script>
+</body>
+</html>

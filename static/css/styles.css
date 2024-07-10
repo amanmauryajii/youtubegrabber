@@ -1,0 +1,87 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+.container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 1200px;
+    text-align: center;
+}
+
+h1 {
+    color: #333;
+}
+
+.main-block {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.block {
+    background-color: #e9ecef;
+    padding: 20px;
+    border-radius: 8px;
+    width: 48%;
+    margin: 10px;
+    text-align: left;
+}
+
+.block h2 {
+    text-align: center;
+    margin-top: 0;
+}
+
+.sub-block {
+    background-color: #f8f9fa;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.sub-block h3 {
+    margin-top: 0;
+}
+
+.thumbnail {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+a {
+    text-decoration: none;
+    color: #007bff;
+    display: inline-block;
+    margin-top: 20px;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .block {
+        width: 100%;
+    }
+}
+
+/* Description Formatting */
+.description {
+    white-space: pre-wrap; /* Preserves white space and line breaks */
+}
